@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @adventure.name %>
+</p>
+
+<p>
+  <strong>Backgroud image:</strong>
+  <%= @adventure.backgroud_image %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @adventure.position %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @adventure.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @adventure.user_id %>
+</p>
+
+<p>
+  <strong>Book name:</strong>
+  <%= @adventure.book_name %>
+</p>
+
+<%= link_to 'Edit', edit_adventure_path(@adventure) %> |
+<%= link_to 'Back', adventures_path %>
