@@ -1,16 +1,24 @@
 # README
 
-Heroku: https://igor-app-api.herokuapp.com/
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Running project:
+Things you may want to cover:
 
-bundle install
+* Ruby version
 
-rake db:create
+* System dependencies
 
-rake db:migrate
+* Configuration
 
-rake db:seed
+* Database creation
 
-rails s
+* Database initialization
 
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
