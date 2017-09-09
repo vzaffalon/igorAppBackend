@@ -1146,3 +1146,797 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 93ms (Views: 83.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/admin" for 127.0.0.1 at 2017-09-08 22:19:02 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (19.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "adventures"[0m
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" ORDER BY "adventures"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players"[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY "players"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "sessions"[0m
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" ORDER BY "sessions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (38.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (24.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.4ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.7ms)
+Completed 200 OK in 2454ms (Views: 1133.0ms | ActiveRecord: 46.8ms)
+
+
+Started GET "/admin/adventure?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:19:06 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"adventure"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" ORDER BY adventures.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (86.7ms)
+Completed 200 OK in 147ms (Views: 114.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/adventure/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:19:07 -0300
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"adventure"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (4.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (25.9ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "sessions"[0m
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" ORDER BY sessions.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (26.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "players"[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY players.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (12.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (10.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (171.8ms)
+Completed 200 OK in 215ms (Views: 204.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/user/new?modal=true" for 127.0.0.1 at 2017-09-08 22:20:20 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"modal"=>"true", "model_name"=>"user"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (5.8ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.9ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (1.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (1.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_text.html.haml (4.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "adventures"[0m
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (10.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (9.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml (377.9ms)
+Completed 200 OK in 396ms (Views: 387.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/user/new" for 127.0.0.1 at 2017-09-08 22:20:32 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w6pWmHit+faimGcnVxJ2xeTj9elWJpBRY+KaL3BU26NWn4tZ2DATQxUPmgLc7pTO6nuI2MZZIT4hdjVyh2Fbrg==", "user"=>{"provider"=>"email", "uid"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "name"=>"", "nickname"=>"", "image"=>"", "email"=>"", "tokens"=>"", "adventure_ids"=>["", ""]}, "model_name"=>"user"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE 1=0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = $1 AND "users"."email" = $2[0m  [["provider", "email"], ["email", ""]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (6.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (9.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_text.html.haml (2.3ms)
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (17.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (12.8ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml (328.5ms)
+Completed 406 Not Acceptable in 359ms (Views: 340.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/admin/user/new" for 127.0.0.1 at 2017-09-08 22:20:38 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUpQqBVp2dfLSiMjxN385FVOwwi4PK9fIiMRZS9jkLXof41ptfQzYnzd3gZPIR7vW9a+OShDHjBgt7442FYQuA==", "user"=>{"provider"=>"email", "uid"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "name"=>"", "nickname"=>"", "image"=>"", "email"=>"zaffalonvictor@gmail.com", "tokens"=>"", "adventure_ids"=>["", ""]}, "model_name"=>"user"}
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE 1=0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = $1 AND "users"."email" = $2[0m  [["provider", "email"], ["email", "zaffalonvictor@gmail.com"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (4.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_text.html.haml (2.1ms)
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (16.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (11.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml (317.3ms)
+Completed 406 Not Acceptable in 344ms (Views: 327.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/admin/user/new" for 127.0.0.1 at 2017-09-08 22:20:49 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y6QbU9mAT5CHPLXbMPS2xOG1qbLF69ffJ63rxfF2gWL2kcaSeR2lJTCrSP67CFTP7y3Ug1WUZrBlOUSYBkMBbw==", "user"=>{"provider"=>"email", "uid"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "name"=>"", "nickname"=>"", "image"=>"", "email"=>"zaffalonvictor@gmail.com", "tokens"=>"", "adventure_ids"=>["", ""]}, "model_name"=>"user"}
+  [1m[36mAdventure Load (0.7ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE 1=0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = $1 AND "users"."email" = $2[0m  [["provider", "email"], ["email", "zaffalonvictor@gmail.com"]]
+  [1m[35mSQL (20.0ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "unconfirmed_email", "name", "nickname", "image", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["uid", "zaffalonvictor@gmail.com"], ["encrypted_password", "$2a$10$pjf.NiZASSrJzR21A9.fOu4.gXN/DjfmGYGV25VLXD1Yz0cwkgL5G"], ["current_sign_in_ip", ""], ["last_sign_in_ip", ""], ["confirmation_token", ""], ["unconfirmed_email", ""], ["name", ""], ["nickname", ""], ["image", ""], ["email", "zaffalonvictor@gmail.com"], ["created_at", "2017-09-09 01:20:49.816995"], ["updated_at", "2017-09-09 01:20:49.816995"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 148ms (Views: 0.5ms | ActiveRecord: 27.8ms)
+
+
+Started POST "/admin/adventure/new" for 127.0.0.1 at 2017-09-08 22:21:00 -0300
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3CZcUUhwgqT1e46NDEX4kCc9pCn19lSSIMXt/XBkte6vgEjAIrLXpttpRBfwDuhUOhj4uTVHcncePPLR+Sx6Ig==", "adventure"=>{"name"=>"Casa da mae joana", "backgroud_image"=>"url qualquer", "position"=>"0", "description"=>"para louco", "user_id"=>"1", "book_name"=>"rpg dos brother", "session_ids"=>["", ""], "player_ids"=>["", ""]}, "return_to"=>"http://localhost:3000/admin/adventure", "_save"=>"", "model_name"=>"adventure"}
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE 1=0[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE 1=0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (11.5ms)[0m  [1m[32mINSERT INTO "adventures" ("name", "backgroud_image", "position", "description", "user_id", "book_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Casa da mae joana"], ["backgroud_image", "url qualquer"], ["position", 0], ["description", "para louco"], ["user_id", 1], ["book_name", "rpg dos brother"], ["created_at", "2017-09-09 01:21:00.384624"], ["updated_at", "2017-09-09 01:21:00.384624"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/adventure
+Completed 302 Found in 50ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/admin/adventure" for 127.0.0.1 at 2017-09-08 22:21:00 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"adventure"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" ORDER BY adventures.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (67.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.8ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (19.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.0ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (15.4ms)
+Completed 200 OK in 350ms (Views: 341.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/adventure/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:21:03 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"adventure", "id"=>"1"}
+  [1m[36mAdventure Load (0.8ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 ORDER BY "adventures"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (13.8ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."adventure_id" = $1[0m  [["adventure_id", 1]]
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" ORDER BY sessions.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (16.5ms)
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."adventure_id" = $1[0m  [["adventure_id", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY players.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (8.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (17.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (148.7ms)
+Completed 200 OK in 217ms (Views: 200.3ms | ActiveRecord: 3.2ms)
+
+
+Started PUT "/admin/adventure/1/edit" for 127.0.0.1 at 2017-09-08 22:21:08 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"94hKjkk+Htggt2V/jlPr3mu+n60D3ksqWuyWbYIrwSLyfhudeFSMTv8hm7EZK7jCVan7HHqD/4Tzgn99k56Lpw==", "adventure"=>{"name"=>"Casa da mae joana 2", "backgroud_image"=>"url qualquer", "position"=>"0", "description"=>"para louco", "user_id"=>"1", "book_name"=>"rpg dos brother", "session_ids"=>["", ""], "player_ids"=>["", ""]}, "return_to"=>"http://localhost:3000/admin/adventure", "_save"=>"", "model_name"=>"adventure", "id"=>"1"}
+  [1m[36mAdventure Load (0.7ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 ORDER BY "adventures"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE 1=0[0m
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."adventure_id" = $1[0m  [["adventure_id", 1]]
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE 1=0[0m
+  [1m[36mPlayer Load (1.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."adventure_id" = $1[0m  [["adventure_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "adventures" SET "name" = $1, "updated_at" = $2 WHERE "adventures"."id" = $3[0m  [["name", "Casa da mae joana 2"], ["updated_at", "2017-09-09 01:21:08.230527"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/adventure
+Completed 302 Found in 35ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/admin/adventure" for 127.0.0.1 at 2017-09-08 22:21:08 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"adventure"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" ORDER BY adventures.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (66.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (19.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.4ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (11.4ms)
+Completed 200 OK in 328ms (Views: 319.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/player?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:21:10 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"player"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY players.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (53.2ms)
+Completed 200 OK in 100ms (Views: 88.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/player/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:21:12 -0300
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"player"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (10.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "adventures"[0m
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (9.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (9.9ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (101.6ms)
+Completed 200 OK in 146ms (Views: 134.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/user/new?modal=true" for 127.0.0.1 at 2017-09-08 22:46:03 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"modal"=>"true", "model_name"=>"user"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.8ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (3.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (1.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (1.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (1.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (1.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_text.html.haml (3.6ms)
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (36.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (12.9ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml (365.3ms)
+Completed 200 OK in 385ms (Views: 378.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/user/new" for 127.0.0.1 at 2017-09-08 22:46:30 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lhH8GlAUXy34Q7QWRSvqIt8dC+nj92g/fc/KGeV+a9kDJCHb8Im1mE/USTPO1wgp0YV22HOI2VA/W2VEEkvr1A==", "user"=>{"provider"=>"email", "uid"=>"eita birl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "name"=>"", "nickname"=>"", "image"=>"", "email"=>"zaffalonvictor@gmail.com", "tokens"=>"", "adventure_ids"=>["", ""]}, "model_name"=>"user"}
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE 1=0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = $1 AND "users"."email" = $2[0m  [["provider", "email"], ["email", "zaffalonvictor@gmail.com"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (3.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (4.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.8ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.8ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_text.html.haml (4.4ms)
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (14.9ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (11.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml (317.2ms)
+Completed 406 Not Acceptable in 445ms (Views: 329.4ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/admin/user/new" for 127.0.0.1 at 2017-09-08 22:46:35 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sDwPLTNCt5oo5GJtw/Z3hYsrZVik3OK8uQ8z0K2ozUUlCdLsk99dL59zn0hICpWOhbMYaTSjU9P7m5yNWp1NSA==", "user"=>{"provider"=>"email", "uid"=>"eita birl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "name"=>"", "nickname"=>"", "image"=>"", "email"=>"zaffalonvictor2@gmail.com", "tokens"=>"", "adventure_ids"=>["", ""]}, "model_name"=>"user"}
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE 1=0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = $1 AND "users"."email" = $2[0m  [["provider", "email"], ["email", "zaffalonvictor2@gmail.com"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (3.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (3.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_text.html.haml (2.5ms)
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (14.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (10.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml (322.8ms)
+Completed 406 Not Acceptable in 355ms (Views: 334.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/admin/user/new" for 127.0.0.1 at 2017-09-08 22:46:39 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hsMtzoG4FO9eQhRpXJ0tMV2oyl6qM+SD2TWx/Iun6bsT9vAPISX+WunV6UzXYc86UzC3bzpMVeyboR6hfJJptg==", "user"=>{"provider"=>"email", "uid"=>"eita birl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "name"=>"", "nickname"=>"", "image"=>"", "email"=>"zaffalonvictor2@gmail.com", "tokens"=>"", "adventure_ids"=>["", ""]}, "model_name"=>"user"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE 1=0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = $1 AND "users"."email" = $2[0m  [["provider", "email"], ["email", "zaffalonvictor2@gmail.com"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (3.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_text.html.haml (3.2ms)
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (15.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (10.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml (335.1ms)
+Completed 406 Not Acceptable in 361ms (Views: 345.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/admin/user/new" for 127.0.0.1 at 2017-09-08 22:46:57 -0300
+Processing by RailsAdmin::MainController#new as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P4AG1pHSQj5CRqIdHW4kbWwG32jqh6l+Wj8pWUEe7BCqtdsXMU+oi/XRXziWksZmYp6iWXr4GBEYq4YEtitsHQ==", "user"=>{"provider"=>"email", "uid"=>"eita birl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "name"=>"", "nickname"=>"", "image"=>"", "email"=>"zaffalonvictor2@gmail.com", "tokens"=>"", "adventure_ids"=>["", ""]}, "model_name"=>"user"}
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE 1=0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = $1 AND "users"."email" = $2[0m  [["provider", "email"], ["email", "zaffalonvictor2@gmail.com"]]
+  [1m[35mSQL (16.0ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "unconfirmed_email", "name", "nickname", "image", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["uid", "zaffalonvictor2@gmail.com"], ["encrypted_password", "$2a$10$iR1pFfX/HA9Cyn/mxYfra.qCasE8bWOPakfQxfNuH/.V131Uwyi0a"], ["current_sign_in_ip", ""], ["last_sign_in_ip", ""], ["confirmation_token", ""], ["unconfirmed_email", ""], ["name", ""], ["nickname", ""], ["image", ""], ["email", "zaffalonvictor2@gmail.com"], ["created_at", "2017-09-09 01:46:58.042905"], ["updated_at", "2017-09-09 01:46:58.042905"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 17.2ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_confirmation_token"
+DETAIL:  Key (confirmation_token)=() already exists.
+: INSERT INTO "users" ("uid", "encrypted_password", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "unconfirmed_email", "name", "nickname", "image", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"):
+  
+activerecord (5.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `async_exec'
+activerecord (5.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `block in exec_no_cache'
+activerecord (5.0.5) lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.5) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `exec_no_cache'
+activerecord (5.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:587:in `execute_and_clear'
+activerecord (5.0.5) lib/active_record/connection_adapters/postgresql/database_statements.rb:103:in `exec_query'
+activerecord (5.0.5) lib/active_record/connection_adapters/postgresql/database_statements.rb:137:in `exec_insert'
+activerecord (5.0.5) lib/active_record/connection_adapters/abstract/database_statements.rb:124:in `insert'
+activerecord (5.0.5) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.0.5) lib/active_record/relation.rb:65:in `insert'
+activerecord (5.0.5) lib/active_record/persistence.rb:572:in `_create_record'
+activerecord (5.0.5) lib/active_record/counter_cache.rb:128:in `_create_record'
+activerecord (5.0.5) lib/active_record/locking/optimistic.rb:75:in `_create_record'
+activerecord (5.0.5) lib/active_record/attribute_methods/dirty.rb:123:in `_create_record'
+activerecord (5.0.5) lib/active_record/callbacks.rb:302:in `block in _create_record'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_create_callbacks'
+activerecord (5.0.5) lib/active_record/callbacks.rb:302:in `_create_record'
+activerecord (5.0.5) lib/active_record/timestamp.rb:68:in `_create_record'
+activerecord (5.0.5) lib/active_record/persistence.rb:548:in `create_or_update'
+activerecord (5.0.5) lib/active_record/callbacks.rb:298:in `block in create_or_update'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.5) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.5) lib/active_record/persistence.rb:129:in `save'
+activerecord (5.0.5) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.5) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.5) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.5) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.5) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.5) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.5) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.5) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.5) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.5) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.5) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.5) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.5) lib/active_record/suppressor.rb:41:in `save'
+rails_admin (1.2.0) lib/rails_admin/adapters/active_record/abstract_object.rb:23:in `save'
+rails_admin (1.2.0) lib/rails_admin/config/actions/new.rb:43:in `block (2 levels) in <class:New>'
+rails_admin (1.2.0) app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+rails_admin (1.2.0) app/controllers/rails_admin/main_controller.rb:22:in `new'
+actionpack (5.0.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.5) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+railties (5.0.5) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.5) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.5) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.5) lib/action_dispatch/routing/mapper.rb:46:in `call'
+actionpack (5.0.5) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.8ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (96.5ms)
+Started POST "/admin/player/new" for 127.0.0.1 at 2017-09-08 22:47:13 -0300
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LMqJ8jLdssdaCfa4ijAEpFbiJAr7/VFbbxTXZIA5SiEFKiWsLrTaJl+hpi58l//EwTDU0uO3ga28hU3m++xgrg==", "player"=>{"nickname"=>"Bergamota", "description"=>"Paladino Cabuloso", "picture"=>"hjeoajs", "user_id"=>"1", "adventure_id"=>"1"}, "return_to"=>"http://localhost:3000/admin/player", "_save"=>"", "model_name"=>"player"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "players" ("nickname", "description", "picture", "user_id", "adventure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nickname", "Bergamota"], ["description", "Paladino Cabuloso"], ["picture", "hjeoajs"], ["user_id", 1], ["adventure_id", 1], ["created_at", "2017-09-09 01:47:13.978055"], ["updated_at", "2017-09-09 01:47:13.978055"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/player
+Completed 302 Found in 25ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/admin/player" for 127.0.0.1 at 2017-09-08 22:47:13 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"player"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY players.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (59.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (19.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.2ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (11.3ms)
+Completed 200 OK in 359ms (Views: 346.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/player/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:17 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"player", "id"=>"1"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 ORDER BY "players"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (4.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (19.2ms)
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (14.0ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (19.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (138.6ms)
+Completed 200 OK in 210ms (Views: 192.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/admin/player?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:22 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"player"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY players.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (65.0ms)
+Completed 200 OK in 111ms (Views: 101.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/adventure?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:24 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"adventure"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" ORDER BY adventures.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (63.9ms)
+Completed 200 OK in 116ms (Views: 102.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/player?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:25 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"player"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY players.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (62.2ms)
+Completed 200 OK in 108ms (Views: 98.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/session?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:25 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"session"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" ORDER BY sessions.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (75.9ms)
+Completed 200 OK in 123ms (Views: 113.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/session/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:27 -0300
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"session"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (4.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.4ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "adventures"[0m
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (12.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (16.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (82.4ms)
+Completed 200 OK in 139ms (Views: 129.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/session/new" for 127.0.0.1 at 2017-09-08 22:47:47 -0300
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2smHdEFAlw8UsHLaeRkJEzcBSErRjeAMTgI2cy8tf+mxGssCeQLQhANR8kgymvMGcgfH6uItrJzA/8YisGSQEQ==", "session"=>{"date"=>"September 21, 2017", "title"=>"Aventura na casa do seu pai", "description"=>"aventura louca la na casa do seu pai", "adventure_id"=>"1"}, "return_to"=>"http://localhost:3000/admin/session", "_save"=>"", "model_name"=>"session"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (8.6ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "title", "description", "adventure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2017-09-21"], ["title", "Aventura na casa do seu pai"], ["description", "aventura louca la na casa do seu pai"], ["adventure_id", 1], ["created_at", "2017-09-09 01:47:47.335478"], ["updated_at", "2017-09-09 01:47:47.335478"]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/session
+Completed 302 Found in 42ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/admin/session" for 127.0.0.1 at 2017-09-08 22:47:47 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"session"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" ORDER BY sessions.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (62.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (23.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.3ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.2ms)
+Completed 200 OK in 332ms (Views: 325.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/session/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:50 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"session", "id"=>"1"}
+  [1m[36mSession Load (2.1ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 ORDER BY "sessions"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (4.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (15.5ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (13.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (87.7ms)
+Completed 200 OK in 146ms (Views: 130.1ms | ActiveRecord: 3.4ms)
+
+
+Started PUT "/admin/session/1/edit" for 127.0.0.1 at 2017-09-08 22:47:55 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HVYoeTkH15pBaknRAVl1yhk5TGs5RbuNRJcCjdeYSevoKzs6CNUfUuFV2lpPHywnEFn+ze0X0qegDb5RD0X5Mg==", "session"=>{"date"=>"September 21, 2017", "title"=>"Aventura na casa do seu paii", "description"=>"aventura louca la na casa do seu pai", "adventure_id"=>"1"}, "return_to"=>"http://localhost:3000/admin/session", "_save"=>"", "model_name"=>"session", "id"=>"1"}
+  [1m[36mSession Load (1.0ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 ORDER BY "sessions"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "sessions" SET "title" = $1, "updated_at" = $2 WHERE "sessions"."id" = $3[0m  [["title", "Aventura na casa do seu paii"], ["updated_at", "2017-09-09 01:47:55.030452"], ["id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/session
+Completed 302 Found in 27ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/admin/session" for 127.0.0.1 at 2017-09-08 22:47:55 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"session"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" ORDER BY sessions.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mAdventure Load (0.7ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (63.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.2ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (22.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (9.4ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (18.2ms)
+Completed 200 OK in 338ms (Views: 327.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/session/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:47:58 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"session", "id"=>"1"}
+  [1m[36mSession Load (1.4ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 ORDER BY "sessions"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (3.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (4.9ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (15.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (14.7ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (90.3ms)
+Completed 200 OK in 150ms (Views: 137.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/player?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:48:00 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"player"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY players.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" = 1[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (69.5ms)
+Completed 200 OK in 114ms (Views: 103.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-09-08 22:48:03 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (85.0ms)
+Completed 200 OK in 130ms (Views: 121.5ms | ActiveRecord: 0.6ms)
+
+
