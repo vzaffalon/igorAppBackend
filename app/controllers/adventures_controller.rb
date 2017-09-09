@@ -1,5 +1,7 @@
 class AdventuresController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_adventure, only: [:show, :edit, :update, :destroy]
+
 
   # GET /adventures
   # GET /adventures.json
