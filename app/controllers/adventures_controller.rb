@@ -55,7 +55,6 @@ class AdventuresController < ApplicationController
   # DELETE /adventures/1.json
   def destroy
     @adventure.destroy
-      json { head :no_content }
   end
 
   private

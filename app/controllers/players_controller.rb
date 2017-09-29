@@ -49,7 +49,6 @@ class PlayersController < ApplicationController
   # DELETE /players/1.json
   def destroy
     @player.destroy
-      json { head :no_content }
   end
 
   private

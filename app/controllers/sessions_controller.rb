@@ -49,7 +49,6 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1.json
   def destroy
     @session.destroy
-      json { head :no_content }
   end
 
   private
