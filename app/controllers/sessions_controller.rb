@@ -1,11 +1,12 @@
 class SessionsController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :set_session, only: [:show, :edit, :update, :destroy]
 
   # GET /sessions
   # GET /sessions.json
   def index
     @sessions = Session.all
+    render json: @sessions
   end
 
   # GET /sessions/1

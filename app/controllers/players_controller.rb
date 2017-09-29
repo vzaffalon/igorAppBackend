@@ -1,11 +1,12 @@
 class PlayersController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :set_player, only: [:show, :edit, :update, :destroy]
 
   # GET /players
   # GET /players.json
   def index
     @players = Player.all
+    render json: @players
   end
 
   # GET /players/1

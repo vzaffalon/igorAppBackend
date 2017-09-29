@@ -1,5 +1,5 @@
 class AdventuresController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :set_adventure, only: [:show, :edit, :update, :destroy]
 
 
@@ -7,6 +7,7 @@ class AdventuresController < ApplicationController
   # GET /adventures.json
   def index
     @adventures = Adventure.all
+    render json: @adventures
   end
 
   # GET /adventures/1
