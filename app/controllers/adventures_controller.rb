@@ -22,6 +22,11 @@ class AdventuresController < ApplicationController
 
   # GET /adventures/1/edit
   def edit
+    if @adventure.update(adventure_params)
+      render :show, status: :ok, location: @adventure
+    else
+      render json: @adventure.errors, status: :unprocessable_entity
+    end
   end
 
   # POST /adventures
