@@ -7919,3 +7919,166 @@ Can't verify CSRF token authenticity.
 Completed 401 Unauthorized in 55ms (Views: 4.1ms | ActiveRecord: 3.1ms)
 
 
+Started POST "/auth/sign_in" for 127.0.0.1 at 2017-10-06 04:17:17 -0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"zaguuhu@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'zaguuhu@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 31ms (Views: 1.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2017-10-06 04:17:28 -0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"zaguhu@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'zaguhu@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 27ms (Views: 0.4ms | ActiveRecord: 18.9ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2017-10-06 04:17:41 -0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"zaffauhu@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'zaffauhu@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"qPXxAC0-B63guSpQXR1Sew\":{\"token\":\"$2a$10$QqE0a.ZhqD3S2b/3o4LtOulKnB5pZjHvANA4ErLWXMGQDKQAt91ne\",\"expiry\":1508472284,\"last_token\":\"$2a$10$O/nnKIZ4HUX/TMmwn7no3O6Ekfy4jOBZP.HEzEhq9BglZTEoSKRy2\",\"updated_at\":\"2017-10-06T02:04:44.192-03:00\"},\"kDN_KIjRebZh2VV8xJyN_A\":{\"token\":\"$2a$10$h/BY3YM/XSVuLJOiAvLvW.3PlID4YvLCV9INQiO6s1ukJjC9toQ7q\",\"expiry\":1508472438,\"last_token\":\"$2a$10$xswZZo90j/ESXLI9NfPXD.eRu124TC5idQTG0F3rjTy2BO2.DndXC\",\"updated_at\":\"2017-10-06T02:07:18.875-03:00\"},\"DKJQTwrjExO3o5h3iDWFRQ\":{\"token\":\"$2a$10$NVRNsa/vHrItvRLIMXv4oOxRgoYcAuHflHqquWyXZ7GKlqdRsR54K\",\"expiry\":1508472638,\"last_token\":\"$2a$10$FSR2mYhzWZnWDSLhrcc.w.FWB4LgQ5u/DomafbrKFxSNn3bQEtDRm\",\"updated_at\":\"2017-10-06T02:10:38.107-03:00\"},\"xhajYEFOAK2LqiRo53NOcQ\":{\"token\":\"$2a$10$Y55OkP11Olgrbi2WaUIFRu0WLVXl8ynyXwVZPl9.YHFN8j3QMuZR.\",\"expiry\":1508473907,\"last_token\":\"$2a$10$3uSf2Z8YaZ.ks1c5APUW/uo0tSZ2zCfZSeH993.iSvBqaYtJcOvyy\",\"updated_at\":\"2017-10-06T02:31:47.398-03:00\"},\"AQAkzPDzVw1LNdaKf3er-A\":{\"token\":\"$2a$10$9Gg9phaH5IzgSLsYQU1vpuqURra1gTbjw7nPh.ZU8kj44Xri0GO.y\",\"expiry\":1508474331,\"last_token\":\"$2a$10$XIkdUWDsORVltn5ScrmB6ePO8QsKFa0winlr9sNROsnhKFj6OYatO\",\"updated_at\":\"2017-10-06T02:38:51.812-03:00\"},\"pKee5AIrFKCdt6PxEwDd3w\":{\"token\":\"$2a$10$20GPWZbPxkjaoER08IZxwesxPDIXYEUuiv68J.tSwuFrXGt.edn8S\",\"expiry\":1508477518,\"last_token\":\"$2a$10$kM2eGUSKlcPjv61Lpj77/.hlPfdvputkEErCw6SOnD.EJt/u/JsUi\",\"updated_at\":\"2017-10-06T03:31:58.888-03:00\"},\"nHI6-6SdZv7NbBeDEqDbCg\":{\"token\":\"$2a$10$k9n.edFnU85ts9klPufdGuF2hYVzKXHkzq/MKv6ahNlQ.Y6.za5va\",\"expiry\":1508477589,\"last_token\":\"$2a$10$INbH880Bw/DJakZfbv0Dm..JM.aoasvWJwKVUZANQRJF6VSoBWDMe\",\"updated_at\":\"2017-10-06T03:33:09.039-03:00\"},\"oMYn6widY05yMgk5nfVgJg\":{\"token\":\"$2a$10$rpCWOWXwy3vc3efW1gdkYuPl2Pl7Y5y3zPxrFbaKP1pi7kygQpUBm\",\"expiry\":1508479340,\"last_token\":\"$2a$10$g/i1Y1X5Ukrjc/w.zeuOEeCTK4uHNTyyyx.Kvmughnxq4U2sqTRp6\",\"updated_at\":\"2017-10-06T04:02:20.608-03:00\"},\"ChaYJfIm7YMLUpoTzhDLcA\":{\"token\":\"$2a$10$Ics0QuEpYsBOMQ4Rr/cU3u/OZW3kV8H4ngmMcYFfcugs/v6BK9PGa\",\"expiry\":1508479437,\"last_token\":\"$2a$10$LHyJWbf6ALlnF3jzQup7j.0v.m0FfWcTFn5hsAAdDv9/ESgR0PO/2\",\"updated_at\":\"2017-10-06T04:03:57.924-03:00\"},\"vEUz0XPmHm5CNHm6RXbcmg\":{\"token\":\"$2a$10$iQEBg7S9EZXQ2bYSgiIkOuqlBzNvfawpQwVxoJgKNDadnw6I2fl06\",\"expiry\":1508479493,\"last_token\":\"$2a$10$NttHLHv3EaDidmNZ6JntP.djNYZWnixfQIYNlzd4cfnGhqBHWRvEu\",\"updated_at\":\"2017-10-06T04:04:53.930-03:00\"},\"apE2aYIK7wfOpkKcr1-zPQ\":{\"token\":\"$2a$10$7WiFyJafOx8YprZhnR9tW.TuqLhnHZDeNYE.mC9oQHVeI11pK3tbS\",\"expiry\":1508480262}}"], ["updated_at", "2017-10-06 07:17:42.035303"], ["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 10], ["current_sign_in_at", "2017-10-06 07:17:42.063058"], ["last_sign_in_at", "2017-10-06 07:04:53.827525"], ["updated_at", "2017-10-06 07:17:42.070239"], ["id", 15]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (6.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"kDN_KIjRebZh2VV8xJyN_A\":{\"token\":\"$2a$10$h/BY3YM/XSVuLJOiAvLvW.3PlID4YvLCV9INQiO6s1ukJjC9toQ7q\",\"expiry\":1508472438,\"last_token\":\"$2a$10$xswZZo90j/ESXLI9NfPXD.eRu124TC5idQTG0F3rjTy2BO2.DndXC\",\"updated_at\":\"2017-10-06T02:07:18.875-03:00\"},\"DKJQTwrjExO3o5h3iDWFRQ\":{\"token\":\"$2a$10$NVRNsa/vHrItvRLIMXv4oOxRgoYcAuHflHqquWyXZ7GKlqdRsR54K\",\"expiry\":1508472638,\"last_token\":\"$2a$10$FSR2mYhzWZnWDSLhrcc.w.FWB4LgQ5u/DomafbrKFxSNn3bQEtDRm\",\"updated_at\":\"2017-10-06T02:10:38.107-03:00\"},\"xhajYEFOAK2LqiRo53NOcQ\":{\"token\":\"$2a$10$Y55OkP11Olgrbi2WaUIFRu0WLVXl8ynyXwVZPl9.YHFN8j3QMuZR.\",\"expiry\":1508473907,\"last_token\":\"$2a$10$3uSf2Z8YaZ.ks1c5APUW/uo0tSZ2zCfZSeH993.iSvBqaYtJcOvyy\",\"updated_at\":\"2017-10-06T02:31:47.398-03:00\"},\"AQAkzPDzVw1LNdaKf3er-A\":{\"token\":\"$2a$10$9Gg9phaH5IzgSLsYQU1vpuqURra1gTbjw7nPh.ZU8kj44Xri0GO.y\",\"expiry\":1508474331,\"last_token\":\"$2a$10$XIkdUWDsORVltn5ScrmB6ePO8QsKFa0winlr9sNROsnhKFj6OYatO\",\"updated_at\":\"2017-10-06T02:38:51.812-03:00\"},\"pKee5AIrFKCdt6PxEwDd3w\":{\"token\":\"$2a$10$20GPWZbPxkjaoER08IZxwesxPDIXYEUuiv68J.tSwuFrXGt.edn8S\",\"expiry\":1508477518,\"last_token\":\"$2a$10$kM2eGUSKlcPjv61Lpj77/.hlPfdvputkEErCw6SOnD.EJt/u/JsUi\",\"updated_at\":\"2017-10-06T03:31:58.888-03:00\"},\"nHI6-6SdZv7NbBeDEqDbCg\":{\"token\":\"$2a$10$k9n.edFnU85ts9klPufdGuF2hYVzKXHkzq/MKv6ahNlQ.Y6.za5va\",\"expiry\":1508477589,\"last_token\":\"$2a$10$INbH880Bw/DJakZfbv0Dm..JM.aoasvWJwKVUZANQRJF6VSoBWDMe\",\"updated_at\":\"2017-10-06T03:33:09.039-03:00\"},\"oMYn6widY05yMgk5nfVgJg\":{\"token\":\"$2a$10$rpCWOWXwy3vc3efW1gdkYuPl2Pl7Y5y3zPxrFbaKP1pi7kygQpUBm\",\"expiry\":1508479340,\"last_token\":\"$2a$10$g/i1Y1X5Ukrjc/w.zeuOEeCTK4uHNTyyyx.Kvmughnxq4U2sqTRp6\",\"updated_at\":\"2017-10-06T04:02:20.608-03:00\"},\"ChaYJfIm7YMLUpoTzhDLcA\":{\"token\":\"$2a$10$Ics0QuEpYsBOMQ4Rr/cU3u/OZW3kV8H4ngmMcYFfcugs/v6BK9PGa\",\"expiry\":1508479437,\"last_token\":\"$2a$10$LHyJWbf6ALlnF3jzQup7j.0v.m0FfWcTFn5hsAAdDv9/ESgR0PO/2\",\"updated_at\":\"2017-10-06T04:03:57.924-03:00\"},\"vEUz0XPmHm5CNHm6RXbcmg\":{\"token\":\"$2a$10$iQEBg7S9EZXQ2bYSgiIkOuqlBzNvfawpQwVxoJgKNDadnw6I2fl06\",\"expiry\":1508479493,\"last_token\":\"$2a$10$NttHLHv3EaDidmNZ6JntP.djNYZWnixfQIYNlzd4cfnGhqBHWRvEu\",\"updated_at\":\"2017-10-06T04:04:53.930-03:00\"},\"apE2aYIK7wfOpkKcr1-zPQ\":{\"token\":\"$2a$10$40dqcdFNhsGVL2Y4.324G.Awon8gRSxZhNA2XkmJZgnyhqcPLgWqa\",\"expiry\":1508480262,\"last_token\":\"$2a$10$7WiFyJafOx8YprZhnR9tW.TuqLhnHZDeNYE.mC9oQHVeI11pK3tbS\",\"updated_at\":\"2017-10-06T04:17:42.194-03:00\"}}"], ["updated_at", "2017-10-06 07:17:42.202013"], ["id", 15]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 403ms (Views: 0.5ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2017-10-06 04:17:42 -0300
+Processing by AdventuresController#index as HTML
+  [1m[36mAdventure Load (7.1ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+Completed 200 OK in 15ms (Views: 5.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2017-10-06 04:17:48 -0300
+Processing by SessionsController#index as HTML
+  [1m[36mSession Load (4.7ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-10-06 04:18:38 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"adventure_id"=>10, "description"=>"Luta casa do elfo", "id"=>0, "title"=>"Nos campos do elfo", "session"=>{"id"=>0, "title"=>"Nos campos do elfo", "description"=>"Luta casa do elfo", "adventure_id"=>10}}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (13.7ms)[0m  [1m[32mINSERT INTO "sessions" ("title", "description", "adventure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Nos campos do elfo"], ["description", "Luta casa do elfo"], ["adventure_id", 10], ["created_at", "2017-10-06 07:18:38.958411"], ["updated_at", "2017-10-06 07:18:38.958411"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 42ms (Views: 2.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2017-10-06 04:18:41 -0300
+Processing by AdventuresController#index as HTML
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2017-10-06 04:18:42 -0300
+Processing by SessionsController#index as HTML
+  [1m[36mSession Load (0.6ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/session?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-06 04:19:15 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"session"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mSession Load (1.2ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" ORDER BY sessions.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mAdventure Load (1.6ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" IN (10, 4)[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (135.2ms)
+Completed 200 OK in 215ms (Views: 163.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/session/4/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-06 04:19:19 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"session", "id"=>"4"}
+  [1m[36mSession Load (1.3ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 ORDER BY "sessions"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (4.9ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" ORDER BY adventures.id desc[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 15[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (19.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (15.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (98.2ms)
+Completed 200 OK in 152ms (Views: 137.7ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2017-10-06 04:23:38 -0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"zaffauhu@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'zaffauhu@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.8ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"kDN_KIjRebZh2VV8xJyN_A\":{\"token\":\"$2a$10$h/BY3YM/XSVuLJOiAvLvW.3PlID4YvLCV9INQiO6s1ukJjC9toQ7q\",\"expiry\":1508472438,\"last_token\":\"$2a$10$xswZZo90j/ESXLI9NfPXD.eRu124TC5idQTG0F3rjTy2BO2.DndXC\",\"updated_at\":\"2017-10-06T02:07:18.875-03:00\"},\"DKJQTwrjExO3o5h3iDWFRQ\":{\"token\":\"$2a$10$NVRNsa/vHrItvRLIMXv4oOxRgoYcAuHflHqquWyXZ7GKlqdRsR54K\",\"expiry\":1508472638,\"last_token\":\"$2a$10$FSR2mYhzWZnWDSLhrcc.w.FWB4LgQ5u/DomafbrKFxSNn3bQEtDRm\",\"updated_at\":\"2017-10-06T02:10:38.107-03:00\"},\"xhajYEFOAK2LqiRo53NOcQ\":{\"token\":\"$2a$10$Y55OkP11Olgrbi2WaUIFRu0WLVXl8ynyXwVZPl9.YHFN8j3QMuZR.\",\"expiry\":1508473907,\"last_token\":\"$2a$10$3uSf2Z8YaZ.ks1c5APUW/uo0tSZ2zCfZSeH993.iSvBqaYtJcOvyy\",\"updated_at\":\"2017-10-06T02:31:47.398-03:00\"},\"AQAkzPDzVw1LNdaKf3er-A\":{\"token\":\"$2a$10$9Gg9phaH5IzgSLsYQU1vpuqURra1gTbjw7nPh.ZU8kj44Xri0GO.y\",\"expiry\":1508474331,\"last_token\":\"$2a$10$XIkdUWDsORVltn5ScrmB6ePO8QsKFa0winlr9sNROsnhKFj6OYatO\",\"updated_at\":\"2017-10-06T02:38:51.812-03:00\"},\"pKee5AIrFKCdt6PxEwDd3w\":{\"token\":\"$2a$10$20GPWZbPxkjaoER08IZxwesxPDIXYEUuiv68J.tSwuFrXGt.edn8S\",\"expiry\":1508477518,\"last_token\":\"$2a$10$kM2eGUSKlcPjv61Lpj77/.hlPfdvputkEErCw6SOnD.EJt/u/JsUi\",\"updated_at\":\"2017-10-06T03:31:58.888-03:00\"},\"nHI6-6SdZv7NbBeDEqDbCg\":{\"token\":\"$2a$10$k9n.edFnU85ts9klPufdGuF2hYVzKXHkzq/MKv6ahNlQ.Y6.za5va\",\"expiry\":1508477589,\"last_token\":\"$2a$10$INbH880Bw/DJakZfbv0Dm..JM.aoasvWJwKVUZANQRJF6VSoBWDMe\",\"updated_at\":\"2017-10-06T03:33:09.039-03:00\"},\"oMYn6widY05yMgk5nfVgJg\":{\"token\":\"$2a$10$rpCWOWXwy3vc3efW1gdkYuPl2Pl7Y5y3zPxrFbaKP1pi7kygQpUBm\",\"expiry\":1508479340,\"last_token\":\"$2a$10$g/i1Y1X5Ukrjc/w.zeuOEeCTK4uHNTyyyx.Kvmughnxq4U2sqTRp6\",\"updated_at\":\"2017-10-06T04:02:20.608-03:00\"},\"ChaYJfIm7YMLUpoTzhDLcA\":{\"token\":\"$2a$10$Ics0QuEpYsBOMQ4Rr/cU3u/OZW3kV8H4ngmMcYFfcugs/v6BK9PGa\",\"expiry\":1508479437,\"last_token\":\"$2a$10$LHyJWbf6ALlnF3jzQup7j.0v.m0FfWcTFn5hsAAdDv9/ESgR0PO/2\",\"updated_at\":\"2017-10-06T04:03:57.924-03:00\"},\"vEUz0XPmHm5CNHm6RXbcmg\":{\"token\":\"$2a$10$iQEBg7S9EZXQ2bYSgiIkOuqlBzNvfawpQwVxoJgKNDadnw6I2fl06\",\"expiry\":1508479493,\"last_token\":\"$2a$10$NttHLHv3EaDidmNZ6JntP.djNYZWnixfQIYNlzd4cfnGhqBHWRvEu\",\"updated_at\":\"2017-10-06T04:04:53.930-03:00\"},\"apE2aYIK7wfOpkKcr1-zPQ\":{\"token\":\"$2a$10$40dqcdFNhsGVL2Y4.324G.Awon8gRSxZhNA2XkmJZgnyhqcPLgWqa\",\"expiry\":1508480262,\"last_token\":\"$2a$10$7WiFyJafOx8YprZhnR9tW.TuqLhnHZDeNYE.mC9oQHVeI11pK3tbS\",\"updated_at\":\"2017-10-06T04:17:42.194-03:00\"},\"1dqpCee7lokBB6K23i11Fg\":{\"token\":\"$2a$10$jtw2cOsxoMfcSn7GFV30IuoS6.bAyp0HeA1d93hnIjIGgk.Ro9vum\",\"expiry\":1508480618}}"], ["updated_at", "2017-10-06 07:23:38.668389"], ["id", 15]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 11], ["current_sign_in_at", "2017-10-06 07:23:38.702552"], ["last_sign_in_at", "2017-10-06 07:17:42.063058"], ["updated_at", "2017-10-06 07:23:38.705486"], ["id", 15]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"DKJQTwrjExO3o5h3iDWFRQ\":{\"token\":\"$2a$10$NVRNsa/vHrItvRLIMXv4oOxRgoYcAuHflHqquWyXZ7GKlqdRsR54K\",\"expiry\":1508472638,\"last_token\":\"$2a$10$FSR2mYhzWZnWDSLhrcc.w.FWB4LgQ5u/DomafbrKFxSNn3bQEtDRm\",\"updated_at\":\"2017-10-06T02:10:38.107-03:00\"},\"xhajYEFOAK2LqiRo53NOcQ\":{\"token\":\"$2a$10$Y55OkP11Olgrbi2WaUIFRu0WLVXl8ynyXwVZPl9.YHFN8j3QMuZR.\",\"expiry\":1508473907,\"last_token\":\"$2a$10$3uSf2Z8YaZ.ks1c5APUW/uo0tSZ2zCfZSeH993.iSvBqaYtJcOvyy\",\"updated_at\":\"2017-10-06T02:31:47.398-03:00\"},\"AQAkzPDzVw1LNdaKf3er-A\":{\"token\":\"$2a$10$9Gg9phaH5IzgSLsYQU1vpuqURra1gTbjw7nPh.ZU8kj44Xri0GO.y\",\"expiry\":1508474331,\"last_token\":\"$2a$10$XIkdUWDsORVltn5ScrmB6ePO8QsKFa0winlr9sNROsnhKFj6OYatO\",\"updated_at\":\"2017-10-06T02:38:51.812-03:00\"},\"pKee5AIrFKCdt6PxEwDd3w\":{\"token\":\"$2a$10$20GPWZbPxkjaoER08IZxwesxPDIXYEUuiv68J.tSwuFrXGt.edn8S\",\"expiry\":1508477518,\"last_token\":\"$2a$10$kM2eGUSKlcPjv61Lpj77/.hlPfdvputkEErCw6SOnD.EJt/u/JsUi\",\"updated_at\":\"2017-10-06T03:31:58.888-03:00\"},\"nHI6-6SdZv7NbBeDEqDbCg\":{\"token\":\"$2a$10$k9n.edFnU85ts9klPufdGuF2hYVzKXHkzq/MKv6ahNlQ.Y6.za5va\",\"expiry\":1508477589,\"last_token\":\"$2a$10$INbH880Bw/DJakZfbv0Dm..JM.aoasvWJwKVUZANQRJF6VSoBWDMe\",\"updated_at\":\"2017-10-06T03:33:09.039-03:00\"},\"oMYn6widY05yMgk5nfVgJg\":{\"token\":\"$2a$10$rpCWOWXwy3vc3efW1gdkYuPl2Pl7Y5y3zPxrFbaKP1pi7kygQpUBm\",\"expiry\":1508479340,\"last_token\":\"$2a$10$g/i1Y1X5Ukrjc/w.zeuOEeCTK4uHNTyyyx.Kvmughnxq4U2sqTRp6\",\"updated_at\":\"2017-10-06T04:02:20.608-03:00\"},\"ChaYJfIm7YMLUpoTzhDLcA\":{\"token\":\"$2a$10$Ics0QuEpYsBOMQ4Rr/cU3u/OZW3kV8H4ngmMcYFfcugs/v6BK9PGa\",\"expiry\":1508479437,\"last_token\":\"$2a$10$LHyJWbf6ALlnF3jzQup7j.0v.m0FfWcTFn5hsAAdDv9/ESgR0PO/2\",\"updated_at\":\"2017-10-06T04:03:57.924-03:00\"},\"vEUz0XPmHm5CNHm6RXbcmg\":{\"token\":\"$2a$10$iQEBg7S9EZXQ2bYSgiIkOuqlBzNvfawpQwVxoJgKNDadnw6I2fl06\",\"expiry\":1508479493,\"last_token\":\"$2a$10$NttHLHv3EaDidmNZ6JntP.djNYZWnixfQIYNlzd4cfnGhqBHWRvEu\",\"updated_at\":\"2017-10-06T04:04:53.930-03:00\"},\"apE2aYIK7wfOpkKcr1-zPQ\":{\"token\":\"$2a$10$40dqcdFNhsGVL2Y4.324G.Awon8gRSxZhNA2XkmJZgnyhqcPLgWqa\",\"expiry\":1508480262,\"last_token\":\"$2a$10$7WiFyJafOx8YprZhnR9tW.TuqLhnHZDeNYE.mC9oQHVeI11pK3tbS\",\"updated_at\":\"2017-10-06T04:17:42.194-03:00\"},\"1dqpCee7lokBB6K23i11Fg\":{\"token\":\"$2a$10$R97KuFN1wQVgDn35EkMOO.2h0H7A1ZC9Yf4dZZP3Mc2OPXoMAKOoi\",\"expiry\":1508480618,\"last_token\":\"$2a$10$jtw2cOsxoMfcSn7GFV30IuoS6.bAyp0HeA1d93hnIjIGgk.Ro9vum\",\"updated_at\":\"2017-10-06T04:23:38.813-03:00\"}}"], ["updated_at", "2017-10-06 07:23:38.816573"], ["id", 15]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 383ms (Views: 2.5ms | ActiveRecord: 37.5ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2017-10-06 04:23:38 -0300
+Processing by AdventuresController#index as HTML
+  [1m[36mAdventure Load (0.9ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2017-10-06 04:26:58 -0300
+Processing by SessionsController#index as HTML
+  [1m[36mSession Load (0.9ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/session/4/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-10-06 04:27:07 -0300
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"session", "id"=>"4"}
+  [1m[36mSession Load (1.1ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 ORDER BY "sessions"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/_delete_notice.html.haml (14.1ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (61.5ms)
+Completed 200 OK in 264ms (Views: 115.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/admin/session/4/delete" for 127.0.0.1 at 2017-10-06 04:27:09 -0300
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wg+2oiti8Uowx3sLt9fSwPJxbysOcJpU/z0GE9HvAZiBNtbL7sDlDdNmfN50sN48/5vu4eGBR2PmyRALNYDcrg==", "return_to"=>"http://localhost:3000/admin/session", "model_name"=>"session", "id"=>"4"}
+  [1m[36mSession Load (0.9ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 ORDER BY "sessions"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[31mDELETE FROM "sessions" WHERE "sessions"."id" = $1[0m  [["id", 4]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/session
+Completed 302 Found in 32ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/admin/session" for 127.0.0.1 at 2017-10-06 04:27:09 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"session"}
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mSession Load (0.6ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" ORDER BY sessions.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures" WHERE "adventures"."id" = 4[0m
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (223.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.3ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (23.6ms)
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (20.8ms)
+  Rendering /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/vzaffalon/.rvm/gems/ruby-2.2.5/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (13.9ms)
+Completed 200 OK in 646ms (Views: 637.2ms | ActiveRecord: 1.1ms)
+
+
