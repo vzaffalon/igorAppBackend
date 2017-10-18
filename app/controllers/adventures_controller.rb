@@ -10,6 +10,12 @@ class AdventuresController < ApplicationController
     render json: @adventures
   end
 
+  def list_user
+    @adventures = Adventure.where(user_id:  params[:user_id])
+    render json: @adventures
+  end
+
+
   # GET /adventures/1
   # GET /adventures/1.json
   def show

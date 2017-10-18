@@ -9,6 +9,11 @@ class PlayersController < ApplicationController
     render json: @players
   end
 
+  def list_players
+    @players = Player.where(adventure_id: params[:adventure_id])
+    render json: @players
+  end
+
   # GET /players/1
   # GET /players/1.json
   def show

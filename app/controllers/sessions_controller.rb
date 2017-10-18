@@ -9,6 +9,11 @@ class SessionsController < ApplicationController
     render json: @sessions
   end
 
+  def list_sessions
+    @sessions = Session.where(adventure_id: params[:adventure_id])
+    render json: @sessions
+  end
+
   # GET /sessions/1
   # GET /sessions/1.json
   def show
