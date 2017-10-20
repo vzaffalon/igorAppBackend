@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'adventures_by_user/:user_id', controller: 'adventures', action: 'list_user'
   get 'sessions_by_adventure/:adventure_id', controller: 'sessions', action: 'list_sessions'
   get 'players_by_adventure/:adventure_id', controller: 'players', action: 'list_players'
+
+  get 'users/find_by_nickname/:nickname', controller: 'users', action: 'get_user_by_nickname'
   resources :sessions
   resources :players
   resources :adventures
